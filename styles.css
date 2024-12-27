@@ -200,7 +200,13 @@ body {
   .carousel-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
-  
+  .iframe iframe{
+    position: relative;
+    left: 30%;
+    width: 500px;
+    height: 300px;
+
+  }
   
   /* Menu Responsivo */
   @media (max-width: 768px) {
@@ -233,6 +239,12 @@ body {
     .cart{
         top: -40px;
     }
+    .iframe iframe{       
+        left: 15%;
+        width: 300px;
+        height: 200px;
+    
+      }
   }
   
   /* Rodapé */
