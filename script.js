@@ -8,11 +8,11 @@ function updateCartCount() {
 
 // Adiciona produtos ao carrinho
 function addToCart(productName, productImage) {
-    cart.push({ name: productName, image: productImage });
-    cartCount++;
-    updateCartCount();
-    alert(`${productName} foi adicionado ao carrinho!`);
-  }
+  cart.push({ name: productName, image: productImage });
+  cartCount++;
+  updateCartCount();
+  alert(`${productName} foi adicionado ao carrinho!`);
+}
 
 // Adiciona produtos ao carrinho
 function addToCart(productName) {
@@ -51,17 +51,13 @@ prevButton.addEventListener('click', () => {
 
 // Redireciona para o WhatsApp ao clicar no carrinho
 document.getElementById('cart-icon').addEventListener('click', () => {
-    if (cart.length > 0) {
-      let cartMessage = 'Olá, gostaria de finalizar a compra dos seguintes produtos:\n';
-      cart.forEach(item => {
-        cartMessage += `\n- ${item.name}\nImagem: ${window.location.origin}/${item.image}`;
-      });
-      const encodedMessage = encodeURIComponent(cartMessage);
-      window.open(`https://wa.me/5521995508233?text=${encodedMessage}`, '_blank');
-    } else {
-      alert('Seu carrinho está vazio!');
-    }
-  });
+  if (cart.length > 0) {
+    const cartMessage = encodeURIComponent(`Olá, gostaria de finalizar a compra dos seguintes produtos: ${cart.join(', ')}`);
+    window.open(`https://wa.me/5521995508233?text=${cartMessage}`, '_blank');
+  } else {
+    alert('Seu carrinho está vazio!');
+  }
+});
 
 // Menu Toggle para dispositivos móveis
 const menuToggle = document.querySelector('.menu-toggle');
