@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Di Olivo Cravatte</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img class="img-logo" src="./Img/logo.jpg" alt="Logo Di Olivo Cravatte">
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <nav class="menu">
+      <a href="#products">Produtos</a>
+      <a href="#about">Quem Somos</a>
+      <a href="#contact">Contato</a>
+      <a href="https://www.instagram.com/diolivocravatte/" target="_blank">
+        <img class="icons-instagram" src="./Img/Instagram.png" alt="Instagram" width="30px">
+      </a>
+      <a href="https://wa.me/5521995508233" target="_blank">
+        <img class="icons-whatsapp" src="./Img/icons-whatsapp.png" alt="WhatsApp">
+      </a>
+    </nav>
+    <div class="cart">
+      <span id="cart-count">0</span>
+      <img src="./Img/Carrinho.png" alt="Carrinho" id="cart-icon">
+    </div>
+  </header>
+
+  <main>
+    <!-- Carrossel de Produtos -->
+    <section id="products">
+      <h2>Produtos</h2>
+      <div class="carousel-container">
+        <button class="carousel-btn prev" aria-label="Anterior">❮</button>
+        <div class="carousel">
+          <div class="product-card">
+            <img class="img-product" src="./Img/Gravatas floral/Azul-vermelha.jpg" alt="Gravata Floral">
+            <h3>Gravata Floral</h3>
+            <p>▫️Slim 6 cm <br>▫️2400 fios</p>
+            <p>R$ 50,00</p>
+            <button onclick="addToCart('Gravata Floral Azul Rosas Vermelhas')">Adicionar ao Carrinho</button>
+          </div>
+          <div class="product-card">
+            <img class="img-product" src="./Img/Gravatas lisas/Gravata Lisas Slim.jpg" alt="Gravatas Lisas Slim Azul" width="200px">
+            <h3>Gravata Lisa Slim Azul</h3>
+            <p>▫️ Largura 5 cm<br>▫️ Comprimento 1,46 m<br>▫️ 1200 fios</p>
+            <p>R$ 40,00</p>
+            <button onclick="addToCart('Gravata Lisa Azul')">Adicionar ao Carrinho</button>
+          </div>
+          <div class="product-card">
+            <img class="img-product" src="./Img/Gravata Slim Premium.jpg" alt="Gravata Premium" width="200px">
+            <h3>Gravata Slim Premium</h3>
+            <p>▫️ Largura: 6 cm<br>▫️ Comprimento: 1,51 m<br>▫️ Tecido com textura<br>▫️ 2400 fios</p>
+            <p>R$ 40,00</p>
+            <button onclick="addToCart('Gravata Slim Premium')">Adicionar ao Carrinho</button>
+          </div>
+
+          <div class="product-card">
+            <img class="img-product" src="./Img/Gravatas floral/azul-claro.jpg" alt="Gravata Floral">
+            <h3>Gravata Floral</h3>
+            <p>▫️Slim 6 cm <br>▫️2400 fios</p>
+            <p>R$ 50,00</p>
+            <button onclick="addToCart('Gravata Floral Azul Claro')">Adicionar ao Carrinho</button>
+          </div>
+          <div class="product-card">
+            <img class="img-product" src="./Img/Gravatas floral/marrom-claro.jpg" alt="Gravata Floral">
+            <h3>Gravata Floral</h3>
+            <p>▫️Slim 6 cm <br>▫️2400 fios</p>
+            <p>R$ 50,00</p>
+            <button onclick="addToCart('Gravata Floral Marrom Claro','./Img/Gravatas floral/marrom-claro.jpg')">Adicionar ao Carrinho</button>
+          </div>
+
+
+
+
+
+
+
+        </div>
+        <button class="carousel-btn next" aria-label="Próximo">❯</button>
+      </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="about">
+      <h2>Quem Somos</h2>
+      <p>Na <strong>Di Olivo Cravatte</strong>, temos como missão oferecer gravatas e acessórios masculinos de alta qualidade que complementam o estilo e elegância dos nossos clientes. Localizados em Livramento de Nossa Senhora, na Bahia, enviamos nossos produtos para todo o Brasil, garantindo excelência em cada peça.</p>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact">
+      <h2>Contato</h2>
+      <p>📍 Livramento de Nossa Senhora - BA</p>
+      <p>📞 <a href="tel:+5521995508233">+55 (21) 99550-8233</a></p>
+      <p>📧 <a href="mailto:contato@diolivocravatte.com">contato@diolivocravatte.com</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Di Olivo Cravatte. Todos os direitos reservados.</p>
+    <p><a href="https://wa.me/5521995508233" target="_blank">Fale Conosco no WhatsApp</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

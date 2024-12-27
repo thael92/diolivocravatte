@@ -1,0 +1,254 @@
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+  }
+  
+  /* Cabeçalho */
+  header {
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 5;
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+  }
+  
+  header .logo {
+    text-align: left;
+  }
+  header .img-logo{
+    border-radius: 50%;
+    width: 200px;
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2);
+  }
+  
+  header .menu-toggle {
+    font-size: 1.8rem;
+    color: #ffffff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+  }
+  a .icons-whatsapp:hover{
+    transform: scale(1.10);  
+
+  }
+  a .icons-instagram:hover{
+    transform: scale(1.10);  
+
+  }
+  
+  nav {
+    display: flex;
+    gap: 20px;
+  }
+  .img-product {
+    border-radius: 50%;
+    width: 200px;
+  
+  }
+  
+  nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  nav a:hover {
+    color: #007bff;
+  }
+  
+  /* Seções */
+  section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  section p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  /* Estilos gerais do carrinho */
+.cart {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    left: -40px;
+  }
+  
+  #cart-icon {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+  }
+  
+  #cart-count {
+    position: absolute;
+    top: -20px;
+    margin: 23px 30px;
+    right: 0;
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 50%;
+    font-weight: bold;
+  }
+  
+  /* Produtos */
+  #products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    z-index: 0;
+  }
+  
+  .product-card {
+    background-color: #1e1e1e;
+        position: relative;
+        /* display: block; */
+        top: 120px;
+    border-radius: 10px;
+    padding: 74px;
+    text-align: center;
+    width: 50vw;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(255, 255, 255, 0.2);
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+  }
+  .carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    margin: 20px auto;
+  }
+  
+  .carousel {
+    display: flex;
+    margin: 113px 0;
+    transition: transform 0.5s ease;
+  }
+  
+  .product-card {
+    flex:80%;
+    max-width: 80%;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .carousel-btn.prev {
+    left: 0;
+    z-index: 2;
+  }
+  
+  .carousel-btn.next {
+    right: 0;
+    z-index: 2;
+  }
+  
+  .carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  
+  /* Menu Responsivo */
+  @media (max-width: 768px) {
+    nav {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 138px;
+      right: 20px;
+      background: #000000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.1);
+    }
+  
+    nav.active {
+      display: flex;
+    }
+  
+    header .menu-toggle {
+      display: block;
+      margin: -65px 10px 0 0;
+    }
+    .product-card {
+        background-color: #1e1e1e;
+            position: relative;
+            display: block; 
+            top: 120px;
+    }
+    .cart{
+        top: -40px;
+    }
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000;
+    color: #d4d4d4;
+  }
+  
+  footer a {
+    color: #28a745;
+    text-decoration: none;
+  }
+  
+  footer a:hover {
+    color: #1c7430;
+  }
+  
